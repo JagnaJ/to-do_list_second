@@ -1,134 +1,190 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-  }
-  
-  header, footer {
-    background-color: #444;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+header, footer {
+  background-color: #444;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.tasks {
+  width: 45%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
   main {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .tasks {
-    width: 45%;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    cursor: pointer;
-    padding: 5px;
-    margin-bottom: 5px;
-    background-color: #fff;
-    border-radius: 5px;
-  }
-  
-  li:hover {
-    background-color: #f0f0f0;
-  }
-  
-  /* Media queries for responsiveness */
-  @media screen and (max-width: 768px) {
-    main {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .tasks {
-      width: 90%;
-      margin-bottom: 20px;
-    }
-  }
-  
-  /* ... */
-footer {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .progress-circle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 100px;
-    height: 100px;
-    background-color: #f0f0f0;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .progress {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .progress::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 90%;
-    height: 90%;
-    background-color: #444;
-    border-radius: 50%;
-    z-index: -1;
+    margin-bottom: 20px;
   }
-  
-  .percent {
-    font-size: 24px;
-    color: #444;
-  }
-  
-  .label {
-    font-size: 10px;
-    color: #888;
-    text-transform: uppercase;
-  }
-  
-  /* Styles for task editing and deletion */
-  li .edit {
-    display: none;
-    cursor: pointer;
-    margin-left: 5px;
-  }
-  
-  li:hover .edit {
-    display: inline-block;
-  }
-  
-  li .delete {
-    display: none;
-    cursor: pointer;
-    margin-left: 5px;
-  }
-  
-  li:hover .delete {
-    display: inline-block;
-    color: red;
-  }
-  /* ... */
-  
+}
+
+/* ... */
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.progress-circle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.progress {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background-color: #444;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.percent {
+  font-size: 24px;
+  color: #444;
+}
+
+.label {
+  font-size: 10px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+/* Styles for task editing and deletion */
+li .edit {
+  display: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+li:hover .edit {
+  display: inline-block;
+}
+
+li .delete {
+  display: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+li:hover .delete {
+  display: inline-block;
+  color: red;
+}
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+main {
+  flex-direction: column;
+  align-items: center;
+}
+
+.tasks {
+  width: 90%;
+  margin-bottom: 20px;
+}
+}
+
+@media screen and (max-width: 480px) {
+header,
+footer {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.tasks {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+li {
+  padding: 3px;
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.progress-circle {
+  width: 80px;
+  height: 80px;
+  top: 10px;
+  right: 10px;
+}
+
+.progress {
+  width: 70px;
+  height: 70px;
+}
+
+.percent {
+  font-size: 18px;
+}
+
+.label {
+  font-size: 8px;
+}
+
+li .edit,
+li .delete {
+  font-size: 12px;
+  margin-left: 3px;
+}
+}
+

@@ -20,11 +20,35 @@
     <main>
       <section class="tasks">
         <h2>To Do</h2>
-        <ul id="todoList"></ul>
+        <ul id="todoList">
+          <!-- Добавлено: иконка удаления для каждой задачи -->
+          <li data-index="0" class="task-item">
+            <span>Example Task 1</span>
+            <i class="edit fa fa-pencil" style="display: none;"></i>
+            <i class="delete fa fa-trash" style="display: none;"></i>
+          </li>
+          <li data-index="1" class="task-item">
+            <span>Example Task 2</span>
+            <i class="edit fa fa-pencil" style="display: none;"></i>
+            <i class="delete fa fa-trash" style="display: none;"></i>
+          </li>
+        </ul>
       </section>
       <section class="tasks">
         <h2>Completed</h2>
-        <ul id="completedList"></ul>
+        <ul id="completedList">
+          <!-- Добавлено: иконка удаления для каждой выполненной задачи -->
+          <li data-index="0" class="task-item">
+            <span>Completed Task 1</span>
+            <i class="edit fa fa-pencil" style="display: none;"></i>
+            <i class="delete fa fa-trash" style="display: none;"></i>
+          </li>
+          <li data-index="1" class="task-item">
+            <span>Completed Task 2</span>
+            <i class="edit fa fa-pencil" style="display: none;"></i>
+            <i class="delete fa fa-trash" style="display: none;"></i>
+          </li>
+        </ul>
       </section>
       <div class="progress-circle">
         <div class="progress">
