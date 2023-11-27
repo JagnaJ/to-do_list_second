@@ -1,4 +1,3 @@
-/* General styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,11 +5,34 @@ body {
   background-color: #f9f9f9;
 }
 
-header, footer {
-  background-color: #444;
+button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 7px;
+}
+
+#addTaskButton {
+  background-color: #f9f9f9;
+  color: #92700a;
+  border-radius: 7px;
+}
+
+#clearAllButton {
+  background-color: #f9f9f9;
+  color: #92700a;
+  margin-top: 10px;
+  border-radius: 7px;
+}
+
+header,
+footer {
+  background-color: #876633;
   color: #fff;
   padding: 10px;
   text-align: center;
+  border-radius: 7px;
 }
 
 main {
@@ -33,12 +55,14 @@ li {
   cursor: pointer;
   padding: 5px;
   margin-bottom: 5px;
-  background-color: #fff;
-  border-radius: 5px;
+  background-color: #f3e9d2;
+  ;
+  border-radius: 7px;
 }
 
 li:hover {
-  background-color: #f0f0f0;
+  background-color: #e0cba1;
+  ;
 }
 
 /* Media queries for responsiveness */
@@ -54,7 +78,6 @@ li:hover {
   }
 }
 
-/* ... */
 footer {
   text-align: center;
   margin-top: 20px;
@@ -130,61 +153,62 @@ li:hover .delete {
   display: inline-block;
   color: red;
 }
+
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
-main {
-  flex-direction: column;
-  align-items: center;
-}
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.tasks {
-  width: 90%;
-  margin-bottom: 20px;
-}
+  .tasks {
+    width: 90%;
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 480px) {
-header,
-footer {
-  padding: 5px;
-  font-size: 14px;
-}
 
-.tasks {
-  width: 100%;
-  margin-bottom: 15px;
-}
+  header,
+  footer {
+    padding: 5px;
+    font-size: 14px;
+  }
 
-li {
-  padding: 3px;
-  margin-bottom: 3px;
-  font-size: 14px;
-}
+  .tasks {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 
-.progress-circle {
-  width: 80px;
-  height: 80px;
-  top: 10px;
-  right: 10px;
-}
+  li {
+    padding: 3px;
+    margin-bottom: 3px;
+    font-size: 14px;
+  }
 
-.progress {
-  width: 70px;
-  height: 70px;
-}
+  .progress-circle {
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    right: 10px;
+  }
 
-.percent {
-  font-size: 18px;
-}
+  .progress {
+    width: 70px;
+    height: 70px;
+  }
 
-.label {
-  font-size: 8px;
-}
+  .percent {
+    font-size: 18px;
+  }
 
-li .edit,
-li .delete {
-  font-size: 12px;
-  margin-left: 3px;
-}
-}
+  .label {
+    font-size: 8px;
+  }
 
+  li .edit,
+  li .delete {
+    font-size: 12px;
+    margin-left: 3px;
+  }
+}
